@@ -7,6 +7,7 @@ public class Pllayercontroler : MonoBehaviour
     public float horizontalMove;
     public float verticallMove;
     public CharacterController player;
+    public float playerspeed;
 
     void Start()
     {
@@ -16,10 +17,13 @@ public class Pllayercontroler : MonoBehaviour
     
     void Update()
     {
-        
+        horizontalMove = Input.GetAxis("horizontal");
+        verticallMove = Input.GetAxis("vertical");
+
+
     }
     void FixedUpdate()
     {
-
+        player.Move(new Vector3(horizontalMove, 0, verticallMove) * playerspeed);
     }
 }

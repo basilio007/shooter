@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 316128582}
+  - component: {fileID: 316128584}
   - component: {fileID: 316128583}
   m_Layer: 0
   m_Name: player
@@ -171,6 +172,25 @@ MonoBehaviour:
   horizontalMove: 0
   verticallMove: 0
   player: {fileID: 0}
+  playerspeed: 1
+--- !u!143 &316128584
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316128580}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +380,6 @@ GameObject:
   - component: {fileID: 1699979819}
   - component: {fileID: 1699979822}
   - component: {fileID: 1699979821}
-  - component: {fileID: 1699979820}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -383,20 +402,6 @@ Transform:
   m_Father: {fileID: 316128582}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1699979820
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699979818}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1699979821
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class Pllayercontroler : MonoBehaviour
     private Vector3 moveplayer;
     public float gravity = 9.8f;
     public float fallvelocity;
+    public float jumforce;
 
     public Camera mainCamera;
     private Vector3 camForward;
@@ -35,16 +36,19 @@ public class Pllayercontroler : MonoBehaviour
         playerInput = Vector3.ClampMagnitude(playerInput, 1);
 
         camDiretion();
-        //moveplayer = playerInput.x * camRight * playerInput.z * camForward;
+        moveplayer = playerInput.x * camRight + playerInput.z * camForward;
 
         moveplayer = moveplayer * playerspeed;
 
         player.transform.LookAt(player.transform.position + moveplayer);
 
-        //SetGravity();
+        SetGravity();
 
-        player.Move(playerInput * playerspeed * Time.deltaTime);
-        Debug.Log(player.velocity.magnitude);
+        playerSkill();
+
+        player.Move(moveplayer * Time.deltaTime);
+
+        Debug.Log(player.isGrounded);
     }
     void camDiretion()  
     {
@@ -58,6 +62,18 @@ public class Pllayercontroler : MonoBehaviour
         camForward = camForward.normalized;
         camRight = camRight.normalized;
     }
+    //funcion para las habilidades del jugador
+    void playerSkill()
+    {
+        if (player.isGrounded && Input.GetButtonDown("Jump"))
+        {
+            fallvelocity = jumforce;
+            moveplayer.y = fallvelocity;
+        }
+    }
+
+
+    //funcion para la gravedad
     void SetGravity()
     {
        

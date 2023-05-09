@@ -12,6 +12,12 @@ public class Pllayercontroler : MonoBehaviour
     public CharacterController player;
     public float playerspeed;
     private Vector3 moveplayer;
+    public bool isOnSlope = false;
+    private Vector3 hitNormal;
+    public float slideVelocity;
+    public float alpoeForceDown;
+
+
     public float gravity = 9.8f;
     public float fallvelocity;
     public float jumforce;
@@ -89,6 +95,27 @@ public class Pllayercontroler : MonoBehaviour
             fallvelocity -= gravity * Time.deltaTime;
             moveplayer.y = fallvelocity;
         }
+
+        SlideDown();
+
+    }
+
+    public void SlideDown()
+    {
+        isOnSlope =Vector3.Angle(Vector3.up, hitNormal) >= player.slopeLimit;
+
+        if (isOnSlope)
+        {
+            moveplayer.x += hitNormal.x * slideVelocity;
+            moveplayer.z += hitNormal.z * slideVelocity;
+
+            moveplayer.y += alpoeForceDown;
+        }
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        hitNormal = hit.normal;
     }
 
 }

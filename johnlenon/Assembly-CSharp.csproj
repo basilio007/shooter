@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Playercontroler.cs" />
     <Compile Include="Assets\Scripts\Pllayercontroler.cs" />
+    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

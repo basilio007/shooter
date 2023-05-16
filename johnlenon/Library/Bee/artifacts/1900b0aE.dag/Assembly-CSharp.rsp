@@ -355,6 +355,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Playercontroler.cs"
 "Assets/Scripts/NewBehaviourScript.cs"
+"Assets/Scripts/Pickableobject.cs"
+"Assets/Scripts/Picupobject.cs"
 "Assets/Scripts/Pllayercontroler.cs"
 "Assets/Scripts/Thirdpersoncamera1.cs"
 -langversion:9.0

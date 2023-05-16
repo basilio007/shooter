@@ -60,6 +60,8 @@
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\Pllayercontroler.cs" />
     <Compile Include="Assets\Scripts\Thirdpersoncamera1.cs" />
+    <Compile Include="Assets\Scripts\Pickableobject.cs" />
+    <Compile Include="Assets\Scripts\Picupobject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -657,6 +659,10 @@
     <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
       <Project>{8CC117D0-9F7B-B33B-B870-5D06FD9D6988}</Project>
       <Name>Unity.VisualScripting.Core.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Cinemachine.Player.csproj">
+      <Project>{F9372F45-522C-E448-80B8-4A8B6686F437}</Project>
+      <Name>Cinemachine.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Analytics.Player.csproj">
       <Project>{FCECE5AF-9CD8-8D0F-22B9-D253CB228FBD}</Project>

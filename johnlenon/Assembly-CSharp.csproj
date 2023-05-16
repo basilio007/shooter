@@ -60,6 +60,8 @@
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\Pllayercontroler.cs" />
     <Compile Include="Assets\Scripts\Thirdpersoncamera1.cs" />
+    <Compile Include="Assets\Scripts\Pickableobject.cs" />
+    <Compile Include="Assets\Scripts\Picupobject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -768,9 +770,17 @@
       <Project>{3F4D4BC9-7FA9-0FD8-ADF3-7AB834639004}</Project>
       <Name>Unity.EditorCoroutines.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Cinemachine.csproj">
+      <Project>{FA2E18A6-47CF-A346-E870-84DA8F7F9138}</Project>
+      <Name>Cinemachine</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Analytics.csproj">
       <Project>{F6E37DED-10A4-13B2-633A-73FECB4448B2}</Project>
       <Name>Unity.Services.Core.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
+      <Project>{BEE28C0C-1DEF-80D5-F761-DDAFB0E3CDAA}</Project>
+      <Name>com.unity.cinemachine.editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
       <Project>{3E9FF9AB-B27D-4784-905D-09F872BFD086}</Project>

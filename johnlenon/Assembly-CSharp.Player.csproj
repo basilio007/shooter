@@ -58,10 +58,11 @@
   <ItemGroup>
     <Compile Include="Assets\Playercontroler.cs" />
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
-    <Compile Include="Assets\Scripts\Pllayercontroler.cs" />
-    <Compile Include="Assets\Scripts\Thirdpersoncamera1.cs" />
-    <Compile Include="Assets\Scripts\Pickableobject.cs" />
     <Compile Include="Assets\Scripts\Picupobject.cs" />
+    <Compile Include="Assets\Scripts\Pllayercontroler.cs" />
+    <Compile Include="Assets\Scripts\Pickableobject.cs" />
+    <Compile Include="Assets\Scripts\Thirdpersoncamera1.cs" />
+    <Compile Include="Assets\Scripts\Platformcontolbase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

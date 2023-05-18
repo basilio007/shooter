@@ -65,6 +65,15 @@
     <Compile Include="Assets\Scripts\Platformcontolbase.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\3D Game Kit - Character Pack\Shaders\Alien.shader" />
+    <None Include="Assets\3D Game Kit - Character Pack\Shaders\EyeLash.shader" />
+    <None Include="Assets\3D Game Kit - Character Pack\Shaders\EyeBallsHD.shader" />
+    <None Include="Assets\3D Game Kit - Character Pack\Shaders\EnergyCore.shader" />
+    <None Include="Assets\3D Game Kit - Character Pack\Shaders\SculptedHair.shader" />
+    <None Include="Assets\3D Game Kit - Character Pack\Shaders\ToonSkin.shader" />
+    <None Include="Assets\3D Game Kit - Character Pack\Shaders\Dissolve.shader" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
     </Reference>

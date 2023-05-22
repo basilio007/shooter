@@ -17,6 +17,10 @@ public class Pllayercontroler : MonoBehaviour
     public float slideVelocity;
     public float alpoeForceDown;
 
+    //Animaciones
+    public Animator PlayerAnimationControler;
+
+
 
     public float gravity = 9.8f;
     public float fallvelocity;
@@ -29,6 +33,8 @@ public class Pllayercontroler : MonoBehaviour
     void Start()
     {
         player = GetComponent<CharacterController>();
+        PlayerAnimationControler = GetComponent<Animator>();
+
     }
 
     
@@ -40,6 +46,8 @@ public class Pllayercontroler : MonoBehaviour
 
         playerInput = new Vector3(horizontalMove, 0, verticallMove);
         playerInput = Vector3.ClampMagnitude(playerInput, 1);
+
+        PlayerAnimationControler.SetFloat("PlayerWalkVelocity", playerInput.magnitude * playerspeed);
 
         camDiretion();
         moveplayer = playerInput.x * camRight + playerInput.z * camForward;
@@ -75,6 +83,7 @@ public class Pllayercontroler : MonoBehaviour
         {
             fallvelocity = jumforce;
             moveplayer.y = fallvelocity;
+            PlayerAnimationControler.SetTrigger("PlayerJump");
         }
     }
 
@@ -94,8 +103,11 @@ public class Pllayercontroler : MonoBehaviour
         {
             fallvelocity -= gravity * Time.deltaTime;
             moveplayer.y = fallvelocity;
+            PlayerAnimationControler.SetFloat("PlayerVerticalNivelVelocity", player.velocity.y);
+
         }
 
+        PlayerAnimationControler.SetBool("IsGrounded", player.isGrounded);
         SlideDown();
 
     }
@@ -117,5 +129,10 @@ public class Pllayercontroler : MonoBehaviour
     {
         hitNormal = hit.normal;
     }
+    private void OnAnimationMove()
+    {
+
+    }
+   
 
 }

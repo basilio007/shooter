@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Pickableobject.cs" />
     <Compile Include="Assets\Scripts\Thirdpersoncamera1.cs" />
     <Compile Include="Assets\Scripts\Platformcontolbase.cs" />
+    <Compile Include="Assets\Scripts\Movethefloor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\3D Game Kit - Character Pack\Shaders\Alien.shader" />
